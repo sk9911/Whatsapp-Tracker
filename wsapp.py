@@ -9,7 +9,8 @@ from notify_run import Notify
 print('Welcome to Whatsapp activity tracker!')
 target = input('Enter the name of the person(as in your contacts) or their phone number to track ')
 
-notify = Notify(endpoint='https://notify.run/qdugEQFazDIWRd8U')
+## ENTER THE ENDPOINT ATTRIBUTE HERE
+notify = Notify(endpoint='https://notify.run/XXXXXXXXXXXXXXXX')
 
 driver = webdriver.Chrome(r"C:\Users\shrey\Downloads\chromedriver")
 driver.get("http://web.whatsapp.com")
@@ -35,6 +36,7 @@ while a>-1:
                 driver.find_element_by_xpath("//span[@class='_3-cMa _3Whw5']")
                 notify.send(f'{target} is online')
                 a=1
+                time.sleep(1)
                 
             except:
                 notify.send(f'{target} is offline')
@@ -65,6 +67,7 @@ while a>-1:
                 driver.find_element_by_xpath("//span[@class='_3-cMa _3Whw5']")
                 notify.send(f'{target} is online')
                 a=1
+                time.sleep(1)
                 
             except:
                 # notify.send('Tejas is offline')
@@ -74,5 +77,3 @@ while a>-1:
             print('Error')
             a=-3
     
-
-    time.sleep(3)
