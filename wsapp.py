@@ -11,8 +11,9 @@ target = input('Enter the name of the person(as in your contacts) or their phone
 
 ## ENTER THE ENDPOINT ATTRIBUTE HERE
 notify = Notify(endpoint='https://notify.run/XXXXXXXXXXXXXXXX')
-
-driver = webdriver.Chrome(r"C:\Users\shrey\Downloads\chromedriver")
+options = webdriver.ChromeOptions() 
+options.add_argument('profile-directory=Default')
+driver = webdriver.Chrome(ChromeDriverManager().install(), options= options)
 driver.get("http://web.whatsapp.com")
 
 wait = WebDriverWait(driver, 600)
