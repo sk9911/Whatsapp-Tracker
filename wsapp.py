@@ -13,6 +13,8 @@ target = input('Enter the name of the person(as in your contacts) or their phone
 ## ENTER THE ENDPOINT ATTRIBUTE HERE
 notify = Notify(endpoint='https://notify.run/XXXXXXXXXXXXXXXX')
 options = webdriver.ChromeOptions() 
+options.add_argument('--headless')
+options.add_argument("user-data-dir=C:\\Users\\Rohit\\AppData\\Local\\Google\\Chrome\\User Data")
 # options.add_argument('--headless')
 options.add_argument('profile-directory=Default')
 driver = webdriver.Chrome(ChromeDriverManager().install(), options= options)
