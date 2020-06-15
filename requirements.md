@@ -9,3 +9,5 @@
     
  3. The code uses the webriver_manager package to make sure the chrome driver is present and is of the correct version.
     To install this package use pip install webdriver-manager
+ 
+ 4. Change the User name on line 17 from Rohit to your user name.
