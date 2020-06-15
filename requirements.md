@@ -1,5 +1,5 @@
 # Requirements:
- 1. The code uses the notify-run python package for python push notifications
+ 1. The code uses the notify-run python package for android push notifications
     
     To install this package use 
     
